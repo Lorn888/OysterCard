@@ -15,6 +15,9 @@ class Oystercard
     @balance + amount > @LIMIT ? (raise_error "Reached limit £#{@LIMIT}") : false
   end   
 
+  def deduct(amount)
+    @balance -= amount
+  end
 
 end
 
